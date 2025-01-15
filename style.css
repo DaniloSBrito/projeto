@@ -10,7 +10,7 @@
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0, 01);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
-  --highlight-color: (255, 255, 255, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
 }
 
@@ -20,7 +20,7 @@
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0, 05);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
-  --highlight-color: (0, 0, 0, 0.1);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/assets/sun.svg);
 }
 
@@ -84,11 +84,15 @@ body * {
   position: absolute;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-back 0.4s;
+}
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.2s forwards;
 }
 
 #switch span {
@@ -134,7 +138,7 @@ ul li a:hover {
 #social-links {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 16px;
 
   padding: 24px 0;
 
@@ -145,7 +149,7 @@ ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 0;
+  padding: 8px 0;
 
   font-size: 24px;
   transition: backgraund 0.2;
@@ -154,7 +158,8 @@ ul li a:hover {
 
 #social-links a:hover {
   background: var(--highlight-color);
-  padding: 16px;
+  padding: 14px;
+  
 }
 
 footer {
@@ -163,6 +168,23 @@ footer {
   font-size: 14px;
 }
 
+/* Animações */
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
 /* media queries */
 @media (min-width: 700px) {
   :root {
