@@ -8,7 +8,7 @@
   --text-color: white;
   --bg-url: url(./assets/assets/bg-mobile.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0, 01);
+  --surface-color: rgba(255, 255, 255, 0, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/assets/moon-stars.svg);
@@ -18,7 +18,7 @@
   --text-color: black;
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0, 05);
+  --surface-color: rgba(0, 0, 0, 0, 0.5);
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/assets/sun.svg);
@@ -110,7 +110,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 16px;
-
+  
   padding: 24px 0;
 }
 ul li a {
@@ -118,7 +118,7 @@ ul li a {
   display: flex;
   justify-content: center;
   padding: 16px 24px;
-
+  
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
 
@@ -138,27 +138,25 @@ ul li a:hover {
 #social-links {
   display: flex;
   justify-content: center;
-  gap: 16px;
 
   padding: 24px 0;
 
-  font-size: 40px;
+  font-size: 24px;
 }
 
 #social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 0;
 
   font-size: 24px;
   transition: backgraund 0.2;
   border-radius: 50%;
+  padding: 16px;
 }
 
 #social-links a:hover {
   background: var(--highlight-color);
-  padding: 14px;
   
 }
 
